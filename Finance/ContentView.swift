@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel: LoginViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Weloome to Finance App")
+            Text("\(viewModel.user?.name ?? "")")
         }
         .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }

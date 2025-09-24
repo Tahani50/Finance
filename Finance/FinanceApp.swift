@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct FinanceApp: App {
+    
+    @StateObject private var loginVM = LoginViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                if loginVM.user == nil {
+                    LoginView(viewModel: loginVM)
+                } else {
+                    ContentView(viewModel: loginVM)
+                }
+            }
         }
     }
 }
