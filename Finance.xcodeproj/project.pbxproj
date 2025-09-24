@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CFFB6C3B2E83DBB000C9B5FB /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = CFFB6C3A2E83DBB000C9B5FB /* GRDB */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CFFB6B682E83C33800C9B5FB /* Finance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFB6C3B2E83DBB000C9B5FB /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = Finance;
 			packageProductDependencies = (
+				CFFB6C3A2E83DBB000C9B5FB /* GRDB */,
 			);
 			productName = Finance;
 			productReference = CFFB6B682E83C33800C9B5FB /* Finance.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = CFFB6B5F2E83C33800C9B5FB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CFFB6C392E83DBB000C9B5FB /* XCRemoteSwiftPackageReference "GRDB" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CFFB6B692E83C33800C9B5FB /* Products */;
 			projectDirPath = "";
@@ -328,6 +337,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CFFB6C392E83DBB000C9B5FB /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CFFB6C3A2E83DBB000C9B5FB /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFFB6C392E83DBB000C9B5FB /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFFB6B602E83C33800C9B5FB /* Project object */;
 }
