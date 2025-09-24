@@ -37,6 +37,21 @@ final class DatabaseManager {
             }
         }
 
+        
+        migrator.registerMigration("v2_create_transaction") { db in
+                  try db.create(table: "transaction") { t in
+                      t.autoIncrementedPrimaryKey("id")
+                      t.column("title", .text).notNull()
+                      t.column("amount", .double).notNull()
+                      t.column("date", .date).notNull()
+                      t.column("category", .text).notNull()
+                      t.column("type", .text).notNull()
+                      t.column("userId", .integer)
+                          .notNull()
+                          .indexed()
+                          .references("user", onDelete: .cascade)
+                  }
+              }
         return migrator
     }
 }
